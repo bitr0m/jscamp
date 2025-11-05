@@ -12,10 +12,24 @@
   </head>
   <body>
     <header>
-      <h2>DevJobs</h2>
+      <h1>
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        DevJobs
+      </h1>
       <nav>
         <a href="">Buscar</a>
-        <a href="">Empleo</a>
+        <a href="">Empleos</a>
         <a href="">Empresas</a>
         <a href="">Salarios</a>
       </nav>
@@ -26,14 +40,16 @@
     </header>
     <main>
       <section class="hero">
-        <div class="hero-content">
-          <h1>Encuentra el trabajo de tus sueños</h1>
-          <p>
-            Únete a la comunidad más grande de desarrollo y encuentra tú próxima
-            oportunidad
-          </p>
-          <!-- role es para la accesibilidad, indicar que el form es para buscar -->
-          <form role="search">
+        <img src="./assets/background.webp" />
+
+        <h1>Encuentra el trabajo de tus sueños</h1>
+        <p>
+          Únete a la comunidad más grande de desarrollo y encuentra tú próxima
+          oportunidad
+        </p>
+        <!-- role es para la accesibilidad, indicar que el form es para buscar -->
+        <form role="search">
+          <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -55,9 +71,9 @@
               placeholder="Buscar empleos por título, habilidad o empresa"
               required
             />
-            <button type="submit">Buscar</button>
-          </form>
-        </div>
+            <button disabled type="submit">Buscar</button>
+          </div>
+        </form>
       </section>
       <section>
         <header>
