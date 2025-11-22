@@ -103,6 +103,7 @@ header div a {
   color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 700;
+  margin-left: 6px;
 }
 
 /* ======================================= */
@@ -285,5 +286,70 @@ footer {
   small {
     color: var(--text-muted);
     font-size: 0.875rem;
+  }
+}
+
+/* Segunda Página */
+.header-search {
+  > div a:nth-child(2) {
+    border-radius: 100%;
+
+    img {
+      max-width: 12px;
+    }
+  }
+}
+
+.search-result {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 1rem;
+
+  .card-offer {
+    border: 1px solid var(--border);
+    padding: 2rem;
+
+    small {
+      color: var(--text-muted);
+    }
+
+    p {
+      color: var(--text-secondary);
+      text-align: inherit;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    > nav {
+      gap: 2rem;
+
+      a {
+        font-size: 1rem;
+
+        &:hover,
+        &:focus {
+          background-color: var(--primary-light);
+          color: var(--text-primary);
+          padding: 8px;
+          border-radius: 6px;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    > nav a.active {
+      background-color: var(--primary-light);
+      color: var(--text-primary);
+      padding: 8px;
+      border-radius: 6px;
+    }
   }
 }
