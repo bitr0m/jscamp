@@ -43,53 +43,54 @@ p {
 /* 🗣️ ESTILO PARA EL HEADER
 /* ======================================= */
 
-/* Logo y títulos principales */
-h1 {
-  font-size: 1.5rem;
-  line-height: 1.2;
-  text-wrap: balance;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  svg {
-    width: 2rem;
-    height: 2rem;
-    color: var(--primary-light);
-  }
-}
-
-h1 + p {
-  text-wrap: balance;
-  margin-bottom: 2rem;
-}
-
 /* Header */
 body > header {
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
-  padding: 1.2rem 1rem;
+  padding: 1.2rem 2rem;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+header {
+  /* Logo y títulos principales */
+  & h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-wrap: balance;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
-  a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.2s;
-    font-weight: 500;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      color: var(--primary-light);
+    }
+  }
 
-    &:hover,
-    &:focus {
-      color: var(--primary);
-      outline: none;
+  h1 + p {
+    text-wrap: balance;
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+
+      &:hover,
+      &:focus {
+        color: var(--primary);
+        outline: none;
+      }
     }
   }
 }
@@ -176,6 +177,7 @@ form input[type="text"] {
 }
 
 form input[type="text"]::placeholder {
+  font-size: 1.2rem;
   color: #64748b;
 }
 
@@ -290,6 +292,19 @@ footer {
 }
 
 /* Segunda Página */
+/* Header Section */
+.nav-job {
+  display: flex;
+  gap: 2rem;
+
+  nav a {
+    background-color: initial;
+    color: var(--text-secondary);
+    padding: inherit;
+    font-size: inherit;
+  }
+}
+
 .header-search {
   > div a:nth-child(2) {
     border-radius: 100%;
@@ -300,12 +315,48 @@ footer {
   }
 }
 
-.search-result {
+/* Contenido */
+.main-jobs {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding-inline: 1rem;
+}
 
+.hero-search {
+  &:nth-child(1) {
+    justify-content: flex-start;
+    height: 300px;
+
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 500;
+    }
+
+    > p {
+      font-size: 1.4rem;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  & form {
+    max-width: none;
+  }
+
+  .search-input {
+    box-shadow: none;
+  }
+
+  .search-category {
+    background-color: transparent;
+    box-shadow: none;
+
+    select {
+    }
+  }
+}
+
+.search-result {
   .card-offer {
     border: 1px solid var(--border);
     padding: 2rem;
