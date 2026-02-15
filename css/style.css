@@ -105,24 +105,46 @@ header div a {
   font-size: 0.9rem;
   font-weight: 700;
   margin-left: 6px;
+
+  &:hover {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
 }
 
 /* ======================================= */
 /* 🚧 ESTILOS PARA EL MAIN */
 /* ======================================= */
+main {
+  width: 100%;
+}
 
-.hero:nth-child(1) {
+section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section:nth-child(1) {
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  min-height: 600px;
 
   h1 {
-    font-size: 4rem;
-    padding-top: 36px;
+    font-size: 4.3rem;
+    /* padding-top: 36px; */
+  }
+
+  > p {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    padding: 0 12rem;
   }
 
   img {
@@ -144,7 +166,7 @@ header div a {
 /* Form */
 
 form {
-  max-width: 42rem;
+  max-width: 44rem;
   width: 100%;
   margin: 0 auto;
   padding-inline: 1rem;
@@ -177,7 +199,6 @@ form input[type="text"] {
 }
 
 form input[type="text"]::placeholder {
-  font-size: 1.2rem;
   color: #64748b;
 }
 
@@ -211,9 +232,8 @@ button {
 }
 
 /* Features Section */
-main > section:nth-child(2) {
+section:nth-child(2) {
   padding-inline: 1rem;
-  padding-top: 4rem;
   margin-bottom: 3rem;
 
   & > header {
@@ -221,6 +241,7 @@ main > section:nth-child(2) {
     flex-direction: column;
     display: flex;
     margin-bottom: 1.5rem;
+    padding-top: 4rem;
 
     h2 {
       margin-bottom: 0;
@@ -245,7 +266,7 @@ main > section:nth-child(2) h2 {
 }
 
 main > section:nth-child(2) > header:first-child > p {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   color: var(--text);
   max-width: 42rem;
   margin: 0 auto;
@@ -316,17 +337,11 @@ footer {
 }
 
 /* Contenido */
-.main-jobs {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  padding-inline: 1rem;
-}
 
 .hero-search {
   &:nth-child(1) {
     justify-content: flex-start;
-    height: 300px;
+    min-height: 0;
 
     h1 {
       font-size: 3.6rem;
@@ -357,6 +372,8 @@ footer {
 }
 
 .search-result {
+  padding-top: 1rem;
+
   .card-offer {
     border: 1px solid var(--border);
     padding: 2rem;
@@ -402,5 +419,19 @@ footer {
       padding: 8px;
       border-radius: 6px;
     }
+  }
+}
+
+/* En Laptops (más de 1200px de pantalla) */
+@media (min-width: 1200px) {
+  section {
+    max-width: 1140px; /* Estándar clásico */
+  }
+}
+
+/* En Monitores Grandes (más de 1400px de pantalla) */
+@media (min-width: 1400px) {
+  section {
+    max-width: 1320px; /* O 1400px si quieres ser más agresivo */
   }
 }
