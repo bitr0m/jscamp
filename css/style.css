@@ -367,6 +367,13 @@ footer {
     box-shadow: none;
 
     select {
+      background-color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      border-color: transparent;
+      display: inline-block;
+      color: var(--text-secondary);
+      font-weight: 600;
     }
   }
 }
@@ -375,6 +382,8 @@ footer {
   padding-top: 1rem;
 
   .card-offer {
+    display: grid;
+    grid-template-columns: 1fr auto;
     border: 1px solid var(--border);
     padding: 2rem;
 
